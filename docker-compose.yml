@@ -1,0 +1,36 @@
+version: '3.0'
+
+services:
+  succes-wp:
+    build: ./
+    networks:
+      - nginx-proxy
+    depends_on:
+      - succes-db
+    environment:
+      WORDPRESS_DB_HOST: succes-db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WEBSITE_NAME: Succes
+      WEBSITE_URL: succes.docker
+      WEBSITE_ADMIN_USER: aaa
+      WEBSITE_ADMIN_PASSWORD: aaa
+      WEBSITE_ADMIN_EMAIL: aaa@aaa.com
+      VIRTUAL_HOST: succes.docker
+      VIRTUAL_PORT: 80
+
+  succes-db:
+    image: mysql:5.7
+    restart: always
+    networks:
+      - nginx-proxy
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+networks:
+  nginx-proxy:
+    external:
+      name: nginx-proxy

@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+  succes-wp:
+    build:
+      args:
+        - COMPOSER_ENV=dev
+    volumes:
+      - ./wp-content/themes/succes:/var/www/html/wp-content/themes/succes
+
+  succes-phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.8.0-3
+    restart: always
+    networks:
+      - nginx-proxy
+    depends_on:
+      - succes-db
+    environment:
+      PMA_HOST: succes-db
+      MYSQL_ROOT_PASSWORD: somewordpress
+      VIRTUAL_HOST: sql.succes.docker
+      VIRTUAL_PORT: 80

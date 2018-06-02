@@ -1,0 +1,98 @@
+{
+  "name": "succes",
+  "description": "succes",
+  "repositories": [{
+    "type": "package",
+    "package": {
+      "name": "wordpress-importer",
+      "type": "wordpress-plugin",
+      "version": "0.6.4",
+      "dist": {
+        "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.4.zip",
+        "type": "zip"
+      }
+    }
+  }, {
+    "type": "package",
+    "package": {
+      "name": "hide-admin-bar",
+      "type": "wordpress-plugin",
+      "version": "1.0.0",
+      "dist": {
+        "url": "https://downloads.wordpress.org/plugin/hide-admin-bar.zip",
+        "type": "zip"
+      }
+    }
+  }, {
+    "type": "package",
+    "package": {
+      "name": "advanced-custom-fields",
+      "type": "wordpress-plugin",
+      "version": "4.4.12",
+      "dist": {
+        "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.12.zip",
+        "type": "zip"
+      }
+    }
+  }, {
+    "type": "package",
+    "package": {
+      "name": "badgeos",
+      "type": "wordpress-plugin",
+      "version": "1.4.11",
+      "dist": {
+        "url": "https://downloads.wordpress.org/plugin/badgeos.1.4.11.zip",
+        "type": "zip"
+      }
+    }
+  }, {
+    "type": "package",
+    "package": {
+      "name": "wp-force-login",
+      "type": "wordpress-plugin",
+      "version": "5.1.1",
+      "dist": {
+        "url": "https://downloads.wordpress.org/plugin/wp-force-login.5.1.1.zip",
+        "type": "zip"
+      }
+    }
+  }, {
+    "type": "package",
+    "package": {
+      "name": "multiple-roles",
+      "type": "wordpress-plugin",
+      "version": "1.2.0",
+      "dist": {
+        "url": "https://downloads.wordpress.org/plugin/multiple-roles.1.2.0.zip",
+        "type": "zip"
+      }
+    }
+  }, {
+    "type": "package",
+    "package": {
+      "name": "twentyseventeen",
+      "type": "wordpress-theme",
+      "version": "1.6",
+      "dist": {
+        "url": "https://downloads.wordpress.org/theme/twentyseventeen.1.6.zip",
+        "type": "zip"
+      }
+    }
+  }],
+  "require": {
+    "composer/installers": "~1.0",
+    "wordpress-importer": "0.6.4",
+    "hide-admin-bar": "1.0.0",
+    "advanced-custom-fields": "4.4.12",
+    "badgeos": "1.4.11",
+    "wp-force-login": "5.1.1",
+    "multiple-roles": "1.2.0",
+    "twentyseventeen": "1.6"
+  },
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}

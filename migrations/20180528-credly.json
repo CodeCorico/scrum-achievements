@@ -1,0 +1,13 @@
+{
+  "credly_enable": "false",
+  "credly_badge_title": "post_title",
+  "credly_badge_short_description": "post_excerpt",
+  "credly_badge_description": "post_body",
+  "credly_badge_criteria": "",
+  "credly_badge_image": "featured_image",
+  "credly_badge_testimonial": "congratulations_text",
+  "credly_badge_evidence": "permalink",
+  "credly_badge_sendemail_add_message": "false",
+  "credly_badge_sendemail_message": "NOTE: Pour demander ce badge officiel et le partager sur les r\u00e9seaux sociaux, cliquez sur le bouton \"Sauvegarder & Partager\" ci-dessus. Si vous avez d\u00e9j\u00e0 un compte Credly, connectez-vous et \"Accepter\" le badge. Si vous n'\u00eates pas un membre, Cr\u00e9er un Compte (gratuit), confirmez votre adresses e-mail, et \"Accepetez\" votre badge.",
+  "api_key": ""
+}

@@ -1,0 +1,7 @@
+{
+  "minimum_role": "publish_posts",
+  "submission_manager_role": "publish_posts",
+  "submission_email": "enabled",
+  "debug_mode": "disabled",
+  "remove_data_on_uninstall": null
+}
